@@ -54,7 +54,7 @@ app.post("/api/domain", (req, res) => {
 app.post("/api/updateDomain", (req, res) => {
   getAllDomains().find(domain => domain.domain === req.body.domain) = deepCopy(req.body);
 
-  res.status(201).json({ message: "Domain updated" });
+  res.status(200).json({ message: "Domain updated" });
 });
 
 app.post("/api/deleteDomain", (req, res) => {
